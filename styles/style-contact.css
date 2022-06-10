@@ -1,0 +1,201 @@
+:root {
+    --brunswick-green: #27544bff;
+    --forest-green-web-lower-opacity: rgba(29, 134, 31, 0.7);
+    --forest-green-web: rgba(29, 134, 31, 1);
+    --light-green: #85df68ff;
+    --green: rgb(51, 196, 51);
+    --green-lower-opacity: rgba(51, 196, 51, 0.7);
+    --eerie-black: #191919ff;
+    --cultured: #f3f4f6ff;
+    --cadet-grey: rgb(128, 148, 140);
+    --dark-grey: rgba(27,29,28,255);
+    --white-lower-opacity: rgba(255, 255, 255, 0.7);
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url(../fonts/Raleway-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: "Raleway";
+    src: url(../fonts/Raleway-Bold.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: "Raleway";
+    src: url(../fonts/Raleway-ExtraLight.ttf) format("truetype");
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+
+html {
+    background-color: var(--dark-grey);
+    font-size: 16px;
+    color: var(--cultured);
+    font-family: "Raleway";
+}
+
+.textLink {
+    color: var(--cadet-grey);
+    transition: 200ms;
+    text-decoration: none;
+}
+
+.textLink:hover {
+    color: var(--green);
+    cursor: pointer;
+}
+
+.textLink::after {
+    content: "\2192";
+}
+
+nav {
+    position: fixed;
+    right: 0;
+    margin-top: 0.5rem;
+}
+
+.pageHeader {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../imgs/house.jpg);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.pageTitle {
+    font-size: 6rem;
+    transition: 200ms;
+    user-select: none;
+}
+
+.pageTitle:hover {
+    transform: scale(1.1);
+    cursor: default;
+}
+
+@media screen and (max-width: 660px) {
+    .pageTitle {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .pageTitle {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 445px) {
+    .pageTitle {
+        font-size: 3rem;
+    }
+}
+
+.greenColor {
+    color: var(--green);
+}
+
+.navList {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+}
+
+.navButton {
+    text-decoration: none;
+    color: var(--white-lower-opacity);
+    padding: 1em 2.5em 1em 2.5em;
+    font-size: 1.1rem;
+    transition: 200ms;
+    border-radius: 0.2em;
+    margin-right: 0.5em;
+}
+
+@media screen and (max-width: 465px) {
+    .navButton {
+        font-size: 0.8rem;
+    }
+}
+
+.navButton:hover, .active {
+    color: var(--cultured);
+    background-color: var(--green-lower-opacity);
+}
+
+.contentWrapper {
+    max-width: 960px;
+    margin: 150px auto;
+}
+
+.sectionTitle {
+    font-size: 1.2rem;
+}
+
+.sectionText {
+    font-size: 1rem;
+    margin-left: 20px;
+    line-height: 1.3em;
+    color: var(--white-lower-opacity);
+}
+
+.sectionDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.content {
+    padding-top: 3em;
+}
+
+footer {
+    text-align: center;
+    display: block;
+    margin-top: 200px;
+}
+
+.footerIcon {
+    max-width: 30px;
+    margin-right: 15px;
+    transition: 200ms;
+    opacity: 0.7;
+}
+
+.footerIcon:hover {
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.footerText {
+    color: var(--white-lower-opacity);
+}
+
+.footerText p::before {
+    content: "\00a9";
+}
+
+.footerLink {
+    color: var(--white-lower-opacity);
+    transition: 200ms;
+    text-decoration: none;
+}
+
+.footerLink:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.footerLink::after {
+    content: "\2192";
+}
